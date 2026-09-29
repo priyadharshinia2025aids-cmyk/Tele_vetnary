@@ -1,0 +1,22 @@
+{
+  "info": {
+    "name": "Tele-Veterinary API",
+    "_postman_id": "tele-vet-local-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [{"key":"baseUrl","value":"http://localhost:8080"}],
+  "item": [
+    {"name":"Dashboard","request":{"method":"GET","url":"{{baseUrl}}/api/dashboard"}},
+    {"name":"Contacts","request":{"method":"GET","url":"{{baseUrl}}/api/contacts"}},
+    {"name":"Products","request":{"method":"GET","url":"{{baseUrl}}/api/products"}},
+    {"name":"Chart of Accounts","request":{"method":"GET","url":"{{baseUrl}}/api/accounts"}},
+    {"name":"Consultations","request":{"method":"GET","url":"{{baseUrl}}/api/televet/consultations"}},
+    {"name":"Create Consultation","request":{"method":"POST","header":[{"key":"Content-Type","value":"application/json"}],"body":{"mode":"raw","raw":"{\"farmer\":{\"id\":1},\"specialist\":{\"id\":2},\"scheduledAt\":\"2026-09-28T10:30:00\",\"livestockType\":\"Cow\",\"symptoms\":\"High fever and swelling\",\"diagnosticTests\":\"Blood test\",\"status\":\"SCHEDULED\"}"},"url":"{{baseUrl}}/api/televet/consultations"}},
+    {"name":"Invoices","request":{"method":"GET","url":"{{baseUrl}}/api/invoices"}},
+    {"name":"Vendor Bills","request":{"method":"GET","url":"{{baseUrl}}/api/vendor-bills"}},
+    {"name":"Payments","request":{"method":"GET","url":"{{baseUrl}}/api/payments"}},
+    {"name":"Budgets","request":{"method":"GET","url":"{{baseUrl}}/api/budgets"}},
+    {"name":"Reports","request":{"method":"GET","url":"{{baseUrl}}/api/reports"}},
+    {"name":"Journal Entries","request":{"method":"GET","url":"{{baseUrl}}/api/journals"}}
+  ]
+}
